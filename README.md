@@ -25,6 +25,8 @@
 
 > A 2.5D / 3D virtual office where every employee is an **AI agent**. You're the Boss: create divisions, hire agents, give orders, and watch them brief, work, and report back.
 
+<a href="https://visual-office.vercel.app"><img src="https://raw.githubusercontent.com/RifqiFachruradzi/visual-office/main/demo.gif" alt="Visual Office demo: the Boss gives an order and AI agents start working" width="100%"/></a>
+
 - **Hierarchical multi-agent system**: Boss → Director → Lead → Staff, with summaries rolling up the chain, rate-limited queues and auto-retry.
 - **3D rendering** with three.js from GLB assets, 2D fallback, and 6 visual themes.
 - **Live business data**: agents read my MiniMarket and Warehouse apps to write stock and sales reports.
