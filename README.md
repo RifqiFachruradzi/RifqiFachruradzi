@@ -1,6 +1,6 @@
 <h1 align="center">Hi, I'm Rifqi Fachruradzi 👋</h1>
 <p align="center">
-  <b>Full-Stack Developer · Next.js · React · TypeScript · AI Agents</b><br/>
+  <b>Full-Stack Developer · Next.js · React · TypeScript · Go · AI Agents</b><br/>
   I build business systems that companies actually run on (POS, inventory, procurement, accounting, logistics)<br/>
   and plug AI into them: OCR invoice reading, AI assistants, and multi-agent workflows.
 </p>
@@ -15,6 +15,7 @@
 ### 🚀 What I do
 
 - Build **end-to-end web apps**: UI, APIs, auth, databases, deployment, all live on Vercel.
+- Design **Go microservices**: REST + gRPC, RBAC with Keycloak, message queues, real-time WebSockets, Docker & Kubernetes.
 - Model **real business processes**: PR → PO → Goods Receipt → Invoice → Payment, double-entry journals, stock cards, approvals, audit logs.
 - Integrate **LLMs (Gemini, Claude)** as assistants, report generators, and hierarchical multi-agent systems.
 - Connect systems together: apps that read each other's data (read-only, safely) to produce insights.
@@ -32,6 +33,19 @@
 - **Live business data**: agents read my MiniMarket and Warehouse apps to write stock and sales reports.
 - **Telegram bot** to command the office remotely.
 - **Programmatic video pipeline**: AI storyboard → Remotion worker on a VPS → MP4 with TTS narration and subtitles. AI-generated animation code is validated and auto-repaired before rendering.
+
+---
+
+### 🚚 Featured — Track The Truck <sub>🔒 private repo · walkthrough on request</sub>
+
+> A **Yard Management System** that orchestrates every truck through a distribution yard: pre-arrival booking, gate-in, parking, queueing, dock loading/unloading, and gate-out.
+
+- **6 Go microservices** (Gin + GORM): checkpoint, ticketing, facility & dock reservation, access control, mobile gateway, file storage.
+- **Rule-engine routing**: every routing decision (gate-in, dock assignment, exit clearance) goes through a Kogito rule-engine contract (with a local mock for development) before any ticket is issued.
+- **Security**: OpenResty/Lua API gateway validating tokens, Keycloak login, and RBAC served over gRPC.
+- **Real-time operations**: WebSocket hubs push live arrival and queue updates, a shared RabbitMQ client library, and WhatsApp messages to drivers.
+- **Operator dashboard** in Next.js 15 / React 19 with tRPC, TanStack Query and Google Maps.
+- One-command local stack with **Docker Compose** (MySQL, Redis, Keycloak, all services) plus Kubernetes manifests.
 
 ---
 
@@ -59,11 +73,11 @@
 
 ### 🛠️ Tech Stack
 
-**Languages:** TypeScript, JavaScript, Python<br/>
+**Languages:** TypeScript, JavaScript, Go, Python, Lua<br/>
 **Frontend:** Next.js (App Router), React 19, Tailwind CSS v4, Zustand, Redux Toolkit, Recharts, three.js<br/>
-**Backend:** Next.js Route Handlers & Server Actions, Node.js, FastAPI, Vercel Functions<br/>
-**Data:** Turso/libSQL + Drizzle, Supabase (Postgres + RLS), Upstash Redis, Vercel Blob<br/>
+**Backend:** Go (Gin, GORM, gRPC), Next.js Route Handlers & Server Actions, tRPC, Node.js, FastAPI, OpenResty<br/>
+**Data & Messaging:** MySQL, Turso/libSQL + Drizzle, Supabase (Postgres + RLS), Redis, RabbitMQ, Vercel Blob<br/>
 **AI:** Gemini API, Claude API, Tesseract.js OCR, Remotion<br/>
-**DevOps:** Vercel, Linux VPS, Podman, OAuth 2.0, Vercel Cron
+**Auth & DevOps:** Keycloak, OAuth 2.0, Docker Compose, Kubernetes, Vercel, Linux VPS, Podman
 
 <p align="center"><i>Open to full-stack / AI engineering roles and freelance projects.</i></p>
